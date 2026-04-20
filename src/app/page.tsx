@@ -23,7 +23,7 @@ export default function Landing() {
         </span>
         <h1 className="text-5xl md:text-7xl font-semibold tracking-tightest max-w-4xl leading-[1.02]">
           Crie, gere e agende.<br />
-          <span className="text-muted">Sem fricção.</span>
+          <span className="text-muted">Automatize sua operação de marketing.</span>
         </h1>
         <p className="mt-6 text-muted text-[15px] max-w-xl leading-relaxed">
           Iactor escreve copys, gera imagens e publica no seu Instagram
