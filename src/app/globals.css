@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://rsms.me/inter/inter.css");
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background: #0A0A0B;
+  color: #EDEDEF;
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "cv11", "ss01", "ss03";
+}
+
+/* gradient mesh background */
+.mesh {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(232,255,89,0.08), transparent 60%),
+    radial-gradient(900px 500px at 0% 100%, rgba(99,102,241,0.08), transparent 60%),
+    #0A0A0B;
+}
+
+.glass {
+  background: rgba(22,22,26,0.6);
+  backdrop-filter: saturate(140%) blur(16px);
+  border: 1px solid #1F1F23;
+}
+
+.hairline {
+  border: 1px solid #1F1F23;
+}
+
+input, textarea {
+  font-family: inherit;
+}
+
+::selection {
+  background: #E8FF59;
+  color: #0A0A0B;
+}
+
+/* hide scrollbar but keep scroll */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, #16161A 0%, #1F1F23 50%, #16161A 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
