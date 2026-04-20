@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
-import { openai } from "@/lib/openai";
+import { getOpenAI } from "@/lib/openai";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(req: Request) {
@@ -12,7 +15,7 @@ export async function POST(req: Request) {
   const { idea, tone } = await req.json();
   if (!idea) return NextResponse.json({ error: "idea required" }, { status: 400 });
 
-  const completion = await openai.chat.completions.create({
+  const completion = await getOpenAI().chat.completions.create({
     model: "gpt-4o-mini",
     messages: [
       {
